@@ -1,0 +1,115 @@
+* {
+    font-family: arial;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    padding-bottom: 16px;
+}
+
+label.error input{
+    border-bottom: solid 1px #eb4a46;
+}
+
+label.error .msgError{
+    display: block;
+}
+
+input {
+    border: none;
+    font-size: 16px;
+    outline: 0;
+    padding: 24px 0 4px;    
+    width: 100%;
+    border-bottom: solid 1px #efeeed;
+    margin-bottom: 8px;
+}
+input:focus {
+    outline: 0;
+    border-bottom: solid 1px #333333;
+}
+
+.label {
+    width: 284px;
+    color: #efeeed;
+    z-index: 999;
+    font-size: 14px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 16px) scale(1); 
+    transition: all .1s ease-in-out;
+}
+    
+label.active > .label {
+    color: #333333;
+    transform: translate(0, 4px) scale(.75);
+}
+
+.inputValidity {
+    display: flex;
+    align-items: center;
+}
+
+input [type="tel"] {
+    font-family: "text-security-disc";
+    -webkit-text-security: disc;
+}
+
+
+input + span {
+    padding-right: 16px;
+    margin-bottom: 16px;
+}
+
+input:invalid+span:after {
+    position: absolute; content: '✖';
+    padding-left: 5px;
+    color: #8b0000;
+}
+
+input:valid+span:after {
+    position: absolute;
+    content: '✓';
+    padding-left: 5px;
+    color: #009000;
+}
+
+.msgError {
+    font-size: 12px;
+    color: #eb4a46;
+    display: none;
+}
+
+
+/* BUTTON */
+button {
+    width: 100%;
+    color: #ffffff;
+    background-color: #00c8b3;
+    border-radius: 9999px;
+    border: none;
+    padding: 16px 0;
+    margin: 16px 0 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    opacity: .7;
+}
+button[disabled=true] {
+    color: #dddcdc;
+    background-color: #f6f6f6;
+    pointer-events: none;
+    cursor: not-allowed;
+}

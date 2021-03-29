@@ -1,0 +1,174 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+
+h4 {
+    color: #00c8b3;
+}
+
+hr {
+    margin: 16px 0;
+    border: none;
+    background: #ddd;
+    color: red;
+    height: 1px;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    color: #ffffff;
+    background-color: #00c8b3;
+    border-radius: 9999px;
+    border: none;
+    padding: 16px 0;
+    margin: 16px 0 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    opacity: .7;
+}
+button[disabled=true] {
+    color: #dddcdc;
+    background-color: #f6f6f6;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* util */
+.center {
+    display: flex;
+    align-items: center;
+}
+
+/* HEADER SECTION */
+header {
+    height: 72px;
+    width: 100%;
+    background-color: #00c8b3;
+    color: #ffffff;
+}
+header > .container {
+    width: 920px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* titleContainer */
+.titleContainer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+.titleContainer > h4 {
+    margin: 0;
+}
+
+.titleContainer > button {
+    padding: 8px 24px;
+    width: auto;
+    margin: 0;
+}
+
+
+/* list */
+ul {
+    list-style: none;
+    border: 1px solid #efeeed;
+    padding: 0px 16px;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
+
+li {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+.action {
+    display: flex;
+}
+
+.action > button {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+.action > button:not(:last-child) {
+    margin-right: 8px;
+}
+
+.icon {
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+
+.edit {
+    background: url(../../assets/edit.svg) no-repeat;
+    background-size: 24px;
+}
+
+.delete {
+    background: url(../../assets/delete.svg) no-repeat;
+    background-size: 24px;
+}
+
+/* sideModal */
+#sideModal {
+    top: 72px;
+    width: auto;
+    height: 100vh;
+    padding: 16px;
+    background-color: white;
+    position: fixed;
+    left: 100%;
+    box-shadow: 1px 1px 4px 0px rgb(85 86 87 / 60%);
+    transition: left .150s linear;
+}
+
+#sideModal.active {
+    left: 0%;
+    right: 0;
+}
+
+#back {
+    background-color: transparent;
+    color: #333333;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.back {
+    background: url(../../assets/back.svg) no-repeat;
+    background-size: 24px;
+    margin-right: 8px;
+}
+
+/* register */
+.registerContainer {
+    display: flex;
+    justify-content: center;
+}

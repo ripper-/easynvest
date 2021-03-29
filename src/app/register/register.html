@@ -1,0 +1,43 @@
+<form class="container" name="myForm" >
+    <label class='input' for="name">
+        <div class="label">Nome completo (sem abreviações)</div>
+        <div class="inputValidity">
+            <input type="text" name="name" id="name" required minlength="3">
+            <span class="validity"></span>
+        </div>
+        <span class="msgError">Campo deve conter 3 caracteres ou mais</span>
+    </label>
+
+    <label class='input' for="email">
+        <div class="label">E-mail</div>
+        <div class="inputValidity">
+            <input type="email" name="email" id="email" required>
+            <span class="validity"></span>
+        </div>
+        <span class="msgError">Email inválido</span>
+    </label>
+
+    <label class='input' for="cpf">
+        <div class="label">CPF</div>
+        <div class="inputValidity">
+            <input type="text" name="cpf" id="cpf" required
+            pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$" maxlength="14" inputmode="numeric">
+            <span class="validity"></span>
+        </div>
+        <span class="msgError">CPF inválido</span>
+    </label>
+
+    <label class='input' for="phone">
+        <div class="label">Telefone</div>
+        <div class="inputValidity">
+            <input type="tel" name="phone" id="phone" required 
+            pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$"  maxlength="15" inputmode="numeric">
+            <span class="validity"></span>
+        </div>
+        <span class="msgError">Telefone inválido, ex. (00) 9 0000-0000</span>
+    </label>
+
+    <button type="button" id="register">
+        Cadastrar
+    </button>
+</form>
